@@ -1,0 +1,21 @@
+@import "../mixins/_breakpoints.scss";
+
+$sizeamount: (10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 ,29, 30, 35, 40, 50, 55, 60); // Adjust this to include the pixel amounts you need.
+
+@each $size in $sizeamount {
+    .fs-#{$size} {
+    font-size: calc(#{$size}px / 1) !important;
+    }
+}
+@each $size in $sizeamount {
+    .fs-icon-#{$size} {
+    font-size: calc(#{$size}px / 1) !important;
+    }
+}
+// @include media-breakpoint('xs'){
+//     @each $size in $sizeamount {
+//         .fs-#{$size} {
+//         font-size: calc(#{$size}px / 1.4) !important;
+//         }
+//     }
+// }

@@ -1,0 +1,22 @@
+.fw-400{
+    font-weight: 400;
+  }
+  .drb-wrap{
+    min-width: 200px;
+    position: absolute;
+    top: 40px;
+    max-height: 250px;
+    overflow-y: auto;
+    .drb-item{
+      padding: 5px;
+      cursor: pointer;
+      transition: all .3s;
+      font-size: 16px;
+      &:hover{
+        background: rgba(0, 0, 0, 0.151);
+      }
+    }
+  }
+.list-scroll{
+  max-height: 287px;
+}

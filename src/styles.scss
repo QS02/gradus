@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdn.quilljs.com/1.2.2/quill.snow.css');
+@import url('https://cdn.quilljs.com/1.2.2/quill.bubble.css');
+
+// indigo-pink, deeppurple-amber, purple-green and pink-bluegrey.
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import "app/theme/styles/base";
+@import "app/theme/styles/theme";
+@import "app/theme/styles/libs-override";
+@import "app/theme/styles/rtl";
+
+@import './assets/scss/style.scss';
+$my-app-primary: mat-palette($mat-blue-grey);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+
+body{
+    margin: 0;
+}
+.mat-drawer-container, .mat-drawer-content{
+    min-height: 100vh;
+}
+.mat-toolbar-row, .mat-toolbar-single-row{
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+// .custome.mat-card{
+//     background: #304FFE;
+//     color: #ffffff;
+// }
+// .custome.mat-card.a-200{
+//     background: #673ab7;
+// }
+.mat-toolbar{
+    background: whitesmoke;
+    // background: #283593;
+}
+.mat-button.header-button{
+    font-size: 17px;
+    color: rgba(0,0,0,.54) !important;
+}
+.full-width{
+    width: 100%;
+}
+// .mat-divider{
+//     border-top-color: rgba(255, 255, 255, 0.62);
+// }
+// .mat-list .mat-list-item, .mat-nav-list .mat-list-item, .mat-selection-list .mat-list-item{
+//     color: rgba(255, 255, 255, 0.87);
+// }
+
+.mat-card-actions, .mat-card-content, .mat-card-subtitle{
+    margin-bottom: 0 !important;
+    // color: white;
+}
+.mat-drawer-side{
+    border-right: none;
+}
+.mat-raised-button.hazard-button{
+    line-height: 24px !important;
+}
+.color-gray{
+    color: gray;
+}
+.mat-drawer-content{
+    @include media-breakpoint('lt-md'){
+        margin-left: 0 !important;
+    }
+}
+.app.indigo-light .mat-toolbar.mat-primary{
+    background: #00467f;
+}
+.app.indigo-light .active-link{
+    background: #00467f;
+}
+
+#custome-hazard-table > tbody > tr > td.mat-cell.cdk-column-hazard.mat-column-hazard.ng-star-inserted{
+    padding-left: 10px;
+}
+i.icon-accent{
+    color: #ffd740;
+}
+i.icon-saccess{
+    color: #28a745;
+}
+.bg-saccess{
+    background-color: #28a745 !important; 
+}
+.app.indigo-light .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .app.indigo-light .mat-checkbox-checked.mat-accent .mat-checkbox-background{
+    background-color: #28a745;
+}
+i.icon-warn{
+    color: #f44336;
+}
+.pos-r{
+    position: relative;
+}
+.overflow-v{
+    overflow: visible;
+}
+.cdk-global-overlay-wrapper{
+    align-items: start !important;
+    margin-top: 40px;
+}
+.dark-color{
+    color: #212121;
+}
+.text-wrap{
+    label{
+    white-space: normal;
+    }
+}
+.mat-autocomplete-panel{
+    max-height: 400px !important;
+}

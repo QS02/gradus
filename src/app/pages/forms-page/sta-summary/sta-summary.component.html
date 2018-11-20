@@ -1,0 +1,387 @@
+<div fxLayout="column">
+    <div fxLayout="row" fxLayoutGap="20px" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="space-between">
+        <div fxFlex="1 1">
+
+            <mat-card class="custome m-b-20">STA Summary. Forman: Mary Foreman</mat-card>
+
+            <mat-card class="custome fs-18 m-b-20">Activity 1: Excavating for Foundation</mat-card>
+
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 full-width m-b-20">
+
+                <ng-container matColumnDef="hh">
+                    <th mat-header-cell *matHeaderCellDef>Hard Hat </th>
+                    <td mat-cell *matCellDef="let element"> {{element.hh}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="assigment">
+                    <th mat-header-cell *matHeaderCellDef> Assigment </th>
+                    <td mat-cell *matCellDef="let element"> {{element.assigment}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            </table>
+
+            <mat-card class="custome fs-18 m-b-20">Activity 2: Install TPO Roofing</mat-card>
+
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 full-width m-b-20">
+
+                <ng-container matColumnDef="hh">
+                    <th mat-header-cell *matHeaderCellDef> HH# </th>
+                    <td mat-cell *matCellDef="let element"> {{element.hh}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="assigment">
+                    <th mat-header-cell *matHeaderCellDef> Assigment </th>
+                    <td mat-cell *matCellDef="let element"> {{element.assigment}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            </table>
+
+            <mat-card class="custome a-200 fs-18 m-b-20">
+                <mat-card-title>
+                    Life Critical Operations
+                </mat-card-title>
+                <mat-list>
+                    <mat-list-item>1. Aerial Lifts</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>2. Hazardous Energy Control</mat-list-item>
+                </mat-list>
+            </mat-card>
+
+        </div>
+        <div fxFlex="1 1">
+            <mat-card class="custome m-b-20">Emergency Logistics</mat-card>
+
+            <table mat-table [dataSource]="dataSourceLogistic" class="mat-elevation-z8 full-width m-b-20">
+
+                <ng-container matColumnDef="contact">
+                    <th mat-header-cell *matHeaderCellDef> Emergency Contacts </th>
+                    <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="number">
+                    <th mat-header-cell *matHeaderCellDef> Number </th>
+                    <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="radio">
+                    <th mat-header-cell *matHeaderCellDef> Radio </th>
+                    <td mat-cell *matCellDef="let element"> {{element.radio}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsLogistic"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsLogistic;"></tr>
+
+            </table>
+
+            <mat-tab-group class="m-b-20" style="height: 330px;">
+                <mat-tab label="Site">
+                    <a href="https://www.google.com/maps/@35.6213246,-78.4171468,16z">
+                        <img width="100%" height="auto" src="assets/map-img/site_emerg_logistics_map.png" alt="">
+                    </a>
+                    <!-- <div style='overflow:hidden;height:auto; width:100%;'>
+                <div id='gmap_canvas' style='height:auto; width:100%;'></div>
+              </div> -->
+                </mat-tab>
+                <mat-tab label="Unit">
+                    <a href="https://www.google.com/maps/@35.6436199,-78.4592733,15.25z">
+                        <img width="100%" height="auto" src="assets/map-img/unit.png" alt="">
+                    </a>
+                </mat-tab>
+                <mat-tab label="CWA01">
+                    <a href="https://www.google.com/maps/@35.6263198,-78.4022817,15z">
+                        <img width="100%" height="auto" src="assets/map-img/cwa.png" alt="">
+                    </a>
+                </mat-tab>
+            </mat-tab-group>
+
+            <mat-card class="custome a-200 fs-18 m-b-20">
+                <mat-card-title>
+                    Work Location
+                </mat-card-title>
+                <mat-card-subtitle>
+                    Warehouse
+                </mat-card-subtitle>
+                <mat-list>
+                    <mat-list-item>West Laydown Yard</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>CWA01</mat-list-item>
+                </mat-list>
+            </mat-card>
+
+            <div fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column" fxLayoutAlign="space-between">
+                <div fxFlex="1 1">
+                    <mat-card class="custome card-scroll a-200 fs-18 m-b-20">
+                        <mat-card-title fxLayout="row" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutGap="21px" fxLayoutAlign="start center">
+                                <mat-checkbox (ngModelChange)="checkEquipmentAll($event)" [(ngModel)]="equipmentCheckedAll"></mat-checkbox>
+                                <span> Equipment </span>
+                            </div>
+                            <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
+                                <button mat-button>
+                                    <mat-icon (click)="removeEquipment()" aria-label="Example icon-button with a heart icon">delete</mat-icon>
+                                </button>
+                                <button class="bg-saccess" (click)="openDialog('equipment')" mat-mini-fab>
+                                    <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+                                </button>
+                            </div>
+                        </mat-card-title>
+                        <mat-list class="list-scroll" perfectScrollbar>
+                            <div *ngFor="let item of equipment; let i = index">
+                                <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start center">
+                                    <mat-checkbox (ngModelChange)="ToCheckedEquipment($event)" [(ngModel)]="equipmentChecked[i]"></mat-checkbox>
+                                    <mat-list-item>{{i+1}}. {{item.name}}</mat-list-item>
+                                </div>
+                                <mat-divider></mat-divider>
+                            </div>
+                        </mat-list>
+                    </mat-card>
+                </div>
+                <div fxFlex="1 1">
+                    <mat-card class="custome a-200 fs-18 m-b-20">
+                        <mat-card-title fxLayout="row" fxLayoutAlign="space-between center">
+                            <div fxLayout="row" fxLayoutGap="21px" fxLayoutAlign="start center">
+                                <mat-checkbox (ngModelChange)="checkToolsAll($event)" [(ngModel)]="toolsCheckedAll"></mat-checkbox>
+                                <span> Tools </span>
+                            </div>
+                            <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
+                                <button mat-button>
+                                    <mat-icon (click)="removeTools()" aria-label="Example icon-button with a heart icon">delete</mat-icon>
+                                </button>
+                                <button class="bg-saccess" (click)="openDialog('tools')" mat-mini-fab>
+                                    <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+                                </button>
+                            </div>
+                        </mat-card-title>
+                        <mat-list class="list-scroll" perfectScrollbar>
+                            <div *ngFor="let item of tools; let i = index">
+                                <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start center">
+                                    <mat-checkbox (ngModelChange)="ToCheckedTools($event)" [(ngModel)]="toolsChecked[i]"></mat-checkbox>
+                                    <mat-list-item>{{i+1}}. {{item.toolname}}</mat-list-item>
+                                </div>
+                                <mat-divider></mat-divider>
+                            </div>
+                        </mat-list>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutGap="20px" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="space-between">
+        <div fxFlex="1 1">
+            <mat-card class="custome a-200 fs-18 m-b-20">
+                <mat-card-title>
+                    Reminders
+                </mat-card-title>
+                <mat-list>
+                    <mat-list-item>
+                        <span>
+                            Permits, Inspections, Training, Licenses, Certifications
+                        </span>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card>
+
+            <mat-card fxLayout="rows" fxLayoutGap="5px" class="m-b-10 overflow-v">
+                <button mat-raised-button>
+                    <i class="material-icons icon-saccess">
+                        add_circle
+                    </i>
+                    <span>
+                        Add
+                    </span>
+                </button>
+                <button mat-raised-button>
+                    <i class="material-icons icon-accent">
+                        edit
+                    </i>
+                    <span>
+                        Edit
+                    </span>
+                </button>
+
+                <button mat-raised-button>
+                    <i class="material-icons">
+                        print
+                    </i>
+                    <span>
+                        Print
+                    </span>
+                </button>
+
+                <div class="pos-r">
+                    <button (click)="showActions = !showActions" mat-raised-button>
+                        <i class="material-icons">
+                            settings
+                        </i>
+                        <span>
+                            More Actions
+                        </span>
+                        <i class="material-icons">
+                            arrow_drop_down
+                        </i>
+                    </button>
+                    <mat-card *ngIf="showActions" class="drb-wrap p-0">
+                        <div *ngFor="let item of ActionsData" class="drb-item">
+                            {{item}}
+                        </div>
+                    </mat-card>
+                </div>
+
+
+
+            </mat-card>
+
+            <table id="custome-hazard-table" mat-table [dataSource]="dataSourceControl" class="mat-elevation-z8 full-width m-b-20">
+
+                <ng-container matColumnDef="number">
+                    <th mat-header-cell *matHeaderCellDef> Number</th>
+                    <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="hazard">
+                    <th mat-header-cell *matHeaderCellDef>
+                        <div class="m-l-10 m-r-10" fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start center">
+                            <span>
+                                Hazard
+                            </span>
+                            <!--  <button class="m-l-10 hazard-button" mat-raised-button color="primary">Add</button> -->
+                        </div>
+                    </th>
+                    <td mat-cell *matCellDef="let element"> {{element.hazard}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="controls">
+                    <th mat-header-cell *matHeaderCellDef> Controls </th>
+                    <td mat-cell *matCellDef="let element">
+                        <div fxLayout="row" fxLayoutAlign="start center">
+                            {{element.controls}}
+                            <!--      <button class="m-l-10" mat-raised-button color="primary">Add</button> -->
+                        </div>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="required">
+                    <th mat-header-cell *matHeaderCellDef> Required </th>
+                    <td mat-cell *matCellDef="let element"> {{element.required}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsControl"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsControl;"></tr>
+
+            </table>
+
+            <mat-card class="custome fs-18 m-b-10">Error Precursors / Potential Issues</mat-card>
+
+            <mat-card class="custome fs-18 m-b-20">
+                <mat-list>
+                    <mat-list-item>
+                        <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width">
+                            <mat-checkbox fxFlex="1 1">Change Departure from Routine</mat-checkbox>
+                            <mat-checkbox fxFlex="1 1">Equipment Condition</mat-checkbox>
+                        </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width">
+                            <mat-checkbox fxFlex="1 1">Complacency</mat-checkbox>
+                            <mat-checkbox fxFlex="1 1">Rework</mat-checkbox>
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card>
+
+        </div>
+        <div fxFlex="1 1">
+
+
+            <mat-card class="fs-18 m-b-5" fxLayoutGap="10px" fxLayout="row" fxLayoutAlign="start center">
+                <i class="material-icons">
+                    wb_cloudy
+                </i>
+                <span class="color-gray">
+                    Thunderstorm possible at 3:45am
+                </span>
+            </mat-card>
+
+            <table mat-table [dataSource]="dataSourceWeather" class="mat-elevation-z8 full-width m-b-20">
+
+                <ng-container matColumnDef="time">
+                    <th mat-header-cell *matHeaderCellDef> TIME</th>
+                    <td mat-cell *matCellDef="let element">
+                        <div fxLayoutGap="10px" fxLayout="row" fxLayoutAlign="start center">
+                            <div>
+                                <div>
+                                    {{element.time}} PM
+                                </div>
+                                <div class="color-gray fs-11 m-t-5">
+                                    THU
+                                </div>
+                            </div>
+                            <div>
+                                <i class="material-icons fs-30 color-gray">
+                                    wb_cloudy
+                                </i>
+                            </div>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef> DESCRIPTIO </th>
+                    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="temp">
+                    <th mat-header-cell *matHeaderCellDef> TEMP </th>
+                    <td mat-cell *matCellDef="let element"> {{element.temp}}° </td>
+                </ng-container>
+
+                <ng-container matColumnDef="feels">
+                    <th mat-header-cell *matHeaderCellDef> FEELS </th>
+                    <td mat-cell *matCellDef="let element"> {{element.feels}}° </td>
+                </ng-container>
+
+                <ng-container matColumnDef="presip">
+                    <th mat-header-cell *matHeaderCellDef> PRESIP </th>
+                    <td mat-cell *matCellDef="let element"> {{element.presip}}% </td>
+                </ng-container>
+
+                <ng-container matColumnDef="humidity">
+                    <th mat-header-cell *matHeaderCellDef> HUMIDITY </th>
+                    <td mat-cell *matCellDef="let element"> {{element.humidity}}% </td>
+                </ng-container>
+
+                <ng-container matColumnDef="wind">
+                    <th mat-header-cell *matHeaderCellDef> WIND </th>
+                    <td mat-cell *matCellDef="let element"> S {{element.wind}} mph</td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsWeather"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsWeather;"></tr>
+
+            </table>
+
+        </div>
+    </div>
+</div>
